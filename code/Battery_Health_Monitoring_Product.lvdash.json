@@ -1,0 +1,93 @@
+{
+  "datasets": [
+    {
+      "name": "3e565b56",
+      "displayName": "Business Analytics Raw Data Preview",
+      "queryLines": [
+        "select is_high_risk_day from batteryhealthdatabricks.default.ml_batterydata_predictions limit 100"
+      ],
+      "catalog": "batteryhealthdatabricks",
+      "schema": "default"
+    },
+    {
+      "name": "4db48a9f",
+      "displayName": "ml_batterydata_predictions",
+      "queryLines": [
+        "select is_high_risk_day from batteryhealthdatabricks.default.ml_batterydata_predictions limit 100"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "f6595de3",
+      "displayName": "Visualization",
+      "layout": [
+        {
+          "widget": {
+            "name": "40b2fa07",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "4db48a9f",
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": false,
+                "showDescription": false,
+                "description": "SELECT * FROM ml_batterydata_predictions"
+              },
+              "widgetType": "bar",
+              "encodings": {}
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 0,
+            "width": 6,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    },
+    {
+      "name": "d944c25d",
+      "displayName": "Global Filters",
+      "layout": [
+        {
+          "widget": {
+            "name": "37c0c0ba",
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-single-select",
+              "encodings": {},
+              "frame": {
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 2
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_GLOBAL_FILTERS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}

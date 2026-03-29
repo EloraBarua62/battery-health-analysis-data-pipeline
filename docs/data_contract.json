@@ -1,0 +1,28 @@
+{
+  "contracts": [
+    {
+      "dataset": "gold_layer_notebook",
+      "description": "Daily battery health KPI dataset used for analytics and sharing.",
+      "columns": [
+        {"name": "report_data", "type": "timestamp", "required": true},
+        {"name": "avg_voltage", "type": "double", "required": true},
+        {"name": "voltage_stability", "type": "double", "required": false},
+        {"name": "peak_temp", "type": "double", "required": true},
+        {"name": "total_voltage_sags", "type": "integer", "required": true},
+        {"name": "thermal_stress_events", "type": "integer", "required": true},
+        {"name": "avg_event_impact", "type": "double", "required": true}
+      ]
+    },
+    {
+      "dataset": "battery_health_prediction",
+      "description": "ML prediction output for battery risk classification.",
+      "columns": [
+        {"name": "report_data", "type": "timestamp", "required": true},
+        {"name": "voltage_stability", "type": "double", "required": true},
+        {"name": "peak_temp", "type": "double", "required": true},
+        {"name": "is_high_risk_day", "type": "integer", "required": true},
+        {"name": "prediction", "type": "integer", "required": true}
+      ]
+    }
+  ]
+}
